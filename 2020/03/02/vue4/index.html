@@ -27,13 +27,13 @@
 <meta property="og:site_name" content="HCHLQ">
 <meta property="og:description" content="vue路由 {ignore}一个站点由很多页面组成，需要在不同的页面之间切换 在vue中，可以把每个页面看作是一个组件，页面的切换，实际上就是组件的切换显示 除了可以手动的实现组件切换，还可以利用vue路由 安装vue路由的核心功能，就是根据不同的页面地址，切换到不同的组件进行显示  要实现这一点，需要用到vue-router库  在页面上引入vue-router库 创建一个VueRouter对象">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/03/02/vue4/assets/2020-02-19-14-42-12.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/02/vue4/assets/2020-02-19-15-15-55.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/images/2020-02-19-14-42-12.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/images/2020-02-19-15-15-55.png">
 <meta property="article:published_time" content="2020-03-02T11:34:27.180Z">
-<meta property="article:modified_time" content="2020-03-02T11:34:58.476Z">
+<meta property="article:modified_time" content="2020-03-20T03:26:40.785Z">
 <meta property="article:author" content="HC">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/03/02/vue4/assets/2020-02-19-14-42-12.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/02/images/2020-02-19-14-42-12.png">
 
 <link rel="canonical" href="http://yoursite.com/2020/03/02/vue4/">
 
@@ -174,10 +174,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-03-02 19:34:27 / Modified: 19:34:58" itemprop="dateCreated datePublished" datetime="2020-03-02T19:34:27+08:00">2020-03-02</time>
+              <time title="Created: 2020-03-02 19:34:27" itemprop="dateCreated datePublished" datetime="2020-03-02T19:34:27+08:00">2020-03-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-03-20 11:26:40" itemprop="dateModified" datetime="2020-03-20T11:26:40+08:00">2020-03-20</time>
+              </span>
 
           
 
@@ -194,7 +200,7 @@
 <p>在vue中，可以把每个页面看作是一个组件，页面的切换，实际上就是组件的切换显示</p>
 <p>除了可以手动的实现组件切换，还可以利用vue路由</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>vue路由的核心功能，就是根据不同的页面地址，切换到不同的组件进行显示</p>
-<p><img src="assets/2020-02-19-14-42-12.png" alt="根据不同的地址显示不同的组件"></p>
+<p><img src="../images/2020-02-19-14-42-12.png" alt="根据不同的地址显示不同的组件"></p>
 <p>要实现这一点，需要用到<code>vue-router</code>库</p>
 <ol>
 <li><strong>在页面上引入<code>vue-router</code>库</strong></li>
@@ -228,7 +234,7 @@
 <li>history</li>
 <li>abstract</li>
 </ul>
-<p><img src="assets/2020-02-19-15-15-55.png" alt=""></p>
+<p><img src="../images/2020-02-19-15-15-55.png" alt=""></p>
 <p>无论是什么模式，vue-router最终会拿到地址，然后根据路由配置切换组件</p>
 <blockquote>
 <p>hash模式兼容性最好<br>history模式地址更优雅，但兼容性稍差，并且需要<code>webpack</code>的开发服务器配合才能完整的实现<br>abstract模式可以适用于任何环境，如<code>node</code>、<code>移动端</code>，浏览器端也能用，不过由于地址变化发生在内存，无法从地址栏感知到</p>
