@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>vue3 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="深入组件 {ignore}属性约束参考官网描述 组件事件组件之间经常都会发生消息的传递，我们称之为组件通信 prop是组件通信的一种，消息从父组件传递到子组件 但还有一些场景，就是子组件中发生了一件事，可是它没有能力处理这件事，需要使用它的人来处理，此时，就需要事件 event 例如，倒计时组件停止了，可是停止之后干嘛呢？在不同的场景要做不同的事情，可能什么也不做，可能在页面上显示倒计时结束了，也">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue3">
+<meta property="og:url" content="http://yoursite.com/2020/03/02/vue3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="深入组件 {ignore}属性约束参考官网描述 组件事件组件之间经常都会发生消息的传递，我们称之为组件通信 prop是组件通信的一种，消息从父组件传递到子组件 但还有一些场景，就是子组件中发生了一件事，可是它没有能力处理这件事，需要使用它的人来处理，此时，就需要事件 event 例如，倒计时组件停止了，可是停止之后干嘛呢？在不同的场景要做不同的事情，可能什么也不做，可能在页面上显示倒计时结束了，也">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/vue3/assets/2020-02-18-16-12-00.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/vue3/assets/2020-02-18-16-28-03.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/vue3/assets/2020-02-18-16-29-11.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/vue3/assets/2020-02-18-17-19-21.png">
+<meta property="article:published_time" content="2020-03-02T11:33:45.032Z">
+<meta property="article:modified_time" content="2020-03-02T11:34:12.777Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/02/vue3/assets/2020-02-18-16-12-00.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vue3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/03/02/vue3/" class="article-date">
+  <time datetime="2020-03-02T11:33:45.032Z" itemprop="datePublished">2020-03-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue3
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="深入组件-ignore"><a href="#深入组件-ignore" class="headerlink" title="深入组件 {ignore}"></a>深入组件 {ignore}</h1><h1 id="属性约束"><a href="#属性约束" class="headerlink" title="属性约束"></a>属性约束</h1><p>参考<a href="https://cn.vuejs.org/v2/guide/components-props.html#Prop-%E9%AA%8C%E8%AF%81" target="_blank" rel="noopener">官网描述</a></p>
+<h1 id="组件事件"><a href="#组件事件" class="headerlink" title="组件事件"></a>组件事件</h1><p>组件之间经常都会发生消息的传递，我们称之为<strong>组件通信</strong></p>
+<p>prop是组件通信的一种，消息从父组件传递到子组件</p>
+<p>但还有一些场景，就是子组件中发生了一件事，可是它没有能力处理这件事，需要使用它的人来处理，此时，就需要<strong>事件 event</strong></p>
+<p>例如，倒计时组件停止了，可是停止之后干嘛呢？在不同的场景要做不同的事情，可能什么也不做，可能在页面上显示倒计时结束了，也可能把计时器组件销毁掉，也可能另一个组件会变化？</p>
+<p>无论是哪种情况，都超出了计时器组件的控制能力</p>
+<p>所以，计时器组件在计时结束后，抛出一个事件，事件可以让父组件收到通知，于是父组件可以站在更高的层面来处理这个问题</p>
+<p><img src="assets/2020-02-18-16-12-00.png" alt="|300"></p>
+<p>子组件中抛出一个事件，称之为<strong>触发事件</strong></p>
+<p>在父组件中为子组件设置事件处理程序，称之为<strong>注册事件</strong></p>
+<p>触发事件的代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$emit(<span class="string">"事件名"</span>, 额外参数)</span><br></pre></td></tr></table></figure>
+
+<p>注册事件的代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-comp</span> 事件名=<span class="string">"处理函数"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>属性和事件是组件间最常见的通信方式，除此之外，组件之间还有很多其他的通信方式，用于解决一些特殊问题</p>
+</blockquote>
+<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><p>如果一个计时器组件，它当前显示的数字，需要被外部控制，那么显示的数字就不能作为状态，而要作为属性，因为状态外部控制不了。</p>
+<p>而这样一来，该计时器组件如何实现计时更新呢？</p>
+<p>正确的方式是，让该组件希望更新属性时，抛出一个事件，让父组件处理</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Timer = &#123;</span><br><span class="line">  props:[<span class="string">"value"</span>],</span><br><span class="line">  data()&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      timerId: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created()&#123;</span><br><span class="line">    <span class="keyword">this</span>.timerId = setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.$emit(<span class="string">"input"</span>, <span class="keyword">this</span>.number - <span class="number">1</span>);</span><br><span class="line">      <span class="comment">//是否计时完成</span></span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  template: <span class="string">`&lt;h1&gt;&#123;&#123;&#125;&#125;&lt;/h1&gt;`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>父组件可以处理该事件，并给予新的属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Parent = &#123;</span><br><span class="line">  components:&#123;Timer&#125;,</span><br><span class="line">  data()&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      n:<span class="number">10</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  template: <span class="string">`&lt;Timer :value="n" @input="n=$event"/&gt;`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="assets/2020-02-18-16-28-03.png" alt="|300"></p>
+<p><img src="assets/2020-02-18-16-29-11.png" alt="|300"></p>
+<p>实际上这是一个非常简单的流程，即：</p>
+<ol>
+<li>子组件想更新数据，通知父组件</li>
+<li>父组件直接更新数据</li>
+</ol>
+<p>为了简化这一流程，只要子组件的属性是<code>value</code>，事件是<code>input</code>，父组件可以用使用<code>v-model</code>直接实现数据绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Timer</span> <span class="attr">v-model</span>=<span class="string">"n"</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 完全等同于 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Timer</span> <span class="attr">:value</span>=<span class="string">"n"</span> @<span class="attr">input</span>=<span class="string">"n=$event"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h1><p>有的时候，组件中某一部分内容不知道要显示什么，它可能什么也不显示，也可能要显示另一个组件，又或者要显示一个标签，又或者要显示一个文本</p>
+<p>例如，一个朦层组件，它仅仅是提供一个朦层，在朦层中间显示什么并不确定</p>
+<p><img src="assets/2020-02-18-17-19-21.png" alt="|600"></p>
+<p>此时，就可以使用插槽</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 朦层组件</span></span><br><span class="line"><span class="keyword">var</span> Modal = &#123;</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div class="modal"&gt;</span></span><br><span class="line"><span class="string">      &lt;!-- 朦层中间区域 --&gt;</span></span><br><span class="line"><span class="string">      &lt;div class="center"&gt;</span></span><br><span class="line"><span class="string">        &lt;!-- 不知道要显示什么，使用插槽 --&gt;</span></span><br><span class="line"><span class="string">        &lt;slot&gt;插槽默认值&lt;/slot&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在使用朦层组件时，如果元素内部的内容将传递给slot</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">modal</span>&gt;</span></span><br><span class="line">  加载中...</span><br><span class="line"><span class="tag">&lt;/<span class="name">modal</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果没有传递元素内容，则会使用slot的默认值</p>
+<blockquote>
+<p>插槽还有很多高级用法</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/02/vue3/" data-id="ck7zkqolo00083ovm4nlchyhe" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/03/02/vue4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          vue4
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/03/02/vue2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">vue2</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2020/03/19/this/">this</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/02/vue5/">vue5</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/02/vue4/">vue4</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/02/vue3/">vue3</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/02/vue2/">vue2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
