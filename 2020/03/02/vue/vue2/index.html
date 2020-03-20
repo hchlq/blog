@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>vue/vue2 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="vue组件 {ignore}知识准备 ES6的模块化知识 ajax网络请求 fetch api promise api async await     ajax请求地址：http:&#x2F;&#x2F;yuanjin.tech:5005&#x2F;api&#x2F;movie?page&#x3D;页码&amp;limit&#x3D;页容量  组件概念一个完整的网页是复杂的，如果将其作为一个整体来进行开发，将会遇到下面的困难  代码凌乱臃肿 不易协作 难以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue&#x2F;vue2">
+<meta property="og:url" content="http://yoursite.com/2020/03/02/vue/vue2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="vue组件 {ignore}知识准备 ES6的模块化知识 ajax网络请求 fetch api promise api async await     ajax请求地址：http:&#x2F;&#x2F;yuanjin.tech:5005&#x2F;api&#x2F;movie?page&#x3D;页码&amp;limit&#x3D;页容量  组件概念一个完整的网页是复杂的，如果将其作为一个整体来进行开发，将会遇到下面的困难  代码凌乱臃肿 不易协作 难以">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/vue/vue2/assets/2020-02-18-10-24-44.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/vue/vue2/assets/2020-02-18-10-28-45.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/vue/vue2/assets/2020-02-18-11-00-58.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/vue/vue2/assets/2020-02-18-11-13-19.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/02/vue/vue2/assets/2020-02-18-14-45-53.png">
+<meta property="article:published_time" content="2020-03-02T11:32:15.291Z">
+<meta property="article:modified_time" content="2020-03-02T11:33:30.583Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/02/vue/vue2/assets/2020-02-18-10-24-44.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vue/vue2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/03/02/vue/vue2/" class="article-date">
+  <time datetime="2020-03-02T11:32:15.291Z" itemprop="datePublished">2020-03-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue/vue2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="vue组件-ignore"><a href="#vue组件-ignore" class="headerlink" title="vue组件 {ignore}"></a>vue组件 {ignore}</h1><h1 id="知识准备"><a href="#知识准备" class="headerlink" title="知识准备"></a>知识准备</h1><ul>
+<li>ES6的模块化知识</li>
+<li>ajax网络请求<ul>
+<li>fetch api</li>
+<li>promise api</li>
+<li>async await</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>ajax请求地址：<a href="http://yuanjin.tech:5005/api/movie?page=页码&amp;limit=页容量" target="_blank" rel="noopener">http://yuanjin.tech:5005/api/movie?page=页码&amp;limit=页容量</a></p>
+</blockquote>
+<h1 id="组件概念"><a href="#组件概念" class="headerlink" title="组件概念"></a>组件概念</h1><p>一个完整的网页是复杂的，如果将其作为一个整体来进行开发，将会遇到下面的困难</p>
+<ul>
+<li>代码凌乱臃肿</li>
+<li>不易协作</li>
+<li>难以复用</li>
+</ul>
+<p>vue推荐使用一种更加精细的控制方案——组件化开发</p>
+<p>所谓组件化，即把一个页面中区域功能细分，每一个区域成为一个组件，每个组件包含：</p>
+<ul>
+<li>功能（JS代码）</li>
+<li>内容（模板代码）</li>
+<li>样式（CSS代码）</li>
+</ul>
+<blockquote>
+<p>由于没有构建工具的支撑，CSS代码暂时无法放到组件中</p>
+</blockquote>
+<h1 id="组件开发"><a href="#组件开发" class="headerlink" title="组件开发"></a>组件开发</h1><h2 id="创建组件"><a href="#创建组件" class="headerlink" title="创建组件"></a>创建组件</h2><p>组件是根据一个普通的配置对象创建的，所以要开发一个组件，只需要写一个配置对象即可</p>
+<p>该配置对象和vue实例的配置是<strong>几乎一样</strong>的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//组件配置对象</span></span><br><span class="line"><span class="keyword">var</span> myComp = &#123;</span><br><span class="line">  data()&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed:&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods:&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  template: <span class="string">`....`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>值得注意的是，组件配置对象和vue实例有以下几点差异：</p>
+<ul>
+<li>无<code>el</code></li>
+<li><code>data</code>必须是一个函数，该函数返回的对象作为数据</li>
+<li>由于没有<code>el</code>配置，组件的模板必须定义在<code>template</code>中</li>
+</ul>
+<h2 id="使用组件"><a href="#使用组件" class="headerlink" title="使用组件"></a>使用组件</h2><p>使用组件分为两步：<strong>注册组件</strong>和<strong>应用组件</strong></p>
+<p><strong>注册组件</strong>：让组件可以在模板中使用</p>
+<p><strong>应用组件</strong>：具体的在模板中使用组件</p>
+<h3 id="注册组件"><a href="#注册组件" class="headerlink" title="注册组件"></a>注册组件</h3><p>注册组件分为两种方式，一种是<strong>全局注册</strong>，一种是<strong>局部注册</strong></p>
+<ol>
+<li><strong>全局注册</strong></li>
+</ol>
+<p>一旦全局注册了一个组件，整个应用中任何地方都可以使用该组件</p>
+<p><img src="assets/2020-02-18-10-24-44.png" alt="|600"></p>
+<p>全局注册的方式是：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 参数1：组件名称，将来在模板中使用组件时，会使用该名称</span></span><br><span class="line"><span class="comment">// 参数2：组件配置对象</span></span><br><span class="line"><span class="comment">// 该代码运行后，即可在模板中使用组件</span></span><br><span class="line">Vue.component(<span class="string">'my-comp'</span>, myComp)</span><br></pre></td></tr></table></figure>
+
+<p>在模板中，可以使用组件了</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-comp</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 或 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">my-comp</span>&gt;</span><span class="tag">&lt;/<span class="name">my-comp</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>但在一些工程化的大型项目中，很多组件都不需要全局使用。<br>比如一个登录组件，只有在登录的相关页面中使用，如果全局注册，将导致构建工具无法优化打包<br><strong>因此，除非组件特别通用，否则不建议使用全局注册</strong></p>
+</blockquote>
+<ol start="2">
+<li><strong>局部注册</strong></li>
+</ol>
+<p>局部注册就是哪里要用到组件，就在哪里注册</p>
+<p><img src="assets/2020-02-18-10-28-45.png" alt="|600"></p>
+<p>局部注册的方式是，在要使用组件的组件或实例中加入一个配置：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是另一个要使用my-comp的组件</span></span><br><span class="line"><span class="keyword">var</span> otherComp = &#123;</span><br><span class="line">  components:&#123;</span><br><span class="line">    <span class="comment">// 属性名为组件名称，模板中将使用该名称</span></span><br><span class="line">    <span class="comment">// 属性值为组件配置对象</span></span><br><span class="line">    <span class="string">"my-comp"</span>: myComp</span><br><span class="line">  &#125;,</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">      &lt;!-- 该组件的其他内容 --&gt;</span></span><br><span class="line"><span class="string">      &lt;my-comp&gt;&lt;/my-comp&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="应用组件"><a href="#应用组件" class="headerlink" title="应用组件"></a>应用组件</h3><p>在模板中使用组件特别简单，把组件名当作HTML元素名使用即可。</p>
+<p>但要注意以下几点：</p>
+<ol>
+<li><strong>组件必须有结束</strong></li>
+</ol>
+<p>组件可以自结束，也可以用结束标记结束，但必须要有结束</p>
+<p>下面的组件使用是错误的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-comp</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>组件的命名</strong></li>
+</ol>
+<p>无论你使用哪种方式注册组件，组件的命名需要遵循规范。</p>
+<p>组件可以使用<code>kebab-case 短横线命名法</code>，也可以使用<code>PascalCase 大驼峰命名法</code></p>
+<p>下面两种命名均是可以的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> otherComp = &#123;</span><br><span class="line">  components:&#123;</span><br><span class="line">    <span class="string">"my-comp"</span>: myComp,  <span class="comment">// 方式1</span></span><br><span class="line">    MyComp: myComp <span class="comment">//方式2</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>实际上，使用<code>小驼峰命名法 camelCase</code>也是可以识别的，只不过不符合官方要求的规范</p>
+</blockquote>
+<p>使用<code>PascalCase</code>方式命名还有一个额外的好处，即可以在模板中使用两种组件名</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> otherComp = &#123;</span><br><span class="line">  components:&#123;</span><br><span class="line">    MyComp: myComp</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>模板中：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 可用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">my-comp</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">MyComp</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>因此，在使用组件时，为了方便，往往使用以下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> MyComp = &#123;</span><br><span class="line">  <span class="comment">//组件配置</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> OtherComp = &#123;</span><br><span class="line">  components:&#123;</span><br><span class="line">    MyComp <span class="comment">// ES6速写属性</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意，<code>PascalCase</code>命名不可以直接在html中使用，但可以在template配置中使用<br>想想为什么？</p>
+</blockquote>
+<h2 id="组件树"><a href="#组件树" class="headerlink" title="组件树"></a>组件树</h2><p>一个组件创建好后，往往会在各种地方使用它。它可能多次出现在vue实例中，也可能出现在其他组件中。</p>
+<p>于是就形成了一个组件树</p>
+<p><img src="assets/2020-02-18-11-00-58.png" alt="|400"></p>
+<h2 id="向组件传递数据"><a href="#向组件传递数据" class="headerlink" title="向组件传递数据"></a>向组件传递数据</h2><p>大部分组件要完成自身的功能，都需要一些额外的信息</p>
+<p>比如一个头像组件，需要告诉它头像的地址，这就需要在使用组件时向组件传递数据</p>
+<p>传递数据的方式有很多种，最常见的一种是使用<strong>组件属性 component props</strong></p>
+<p>首先在组件中申明可以接收哪些属性:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> MyComp = &#123;</span><br><span class="line">  props:[<span class="string">"p1"</span>, <span class="string">"p2"</span>, <span class="string">"p3"</span>],</span><br><span class="line">  <span class="comment">// 和vue实例一样，使用组件时也会创建组件的实例</span></span><br><span class="line">  <span class="comment">// 而组件的属性会被提取到组件实例中，因此可以在模板中使用</span></span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">      &#123;&#123;p1&#125;&#125;, &#123;&#123;p2&#125;&#125;, &#123;&#123;p3&#125;&#125;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在使用组件时，向其传递属性：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> OtherComp = &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    MyComp</span><br><span class="line">  &#125;,</span><br><span class="line">  data()&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      a:<span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;my-comp :p1="a" :p2="2" p3="3"/&gt;</span></span><br><span class="line"><span class="string">  `</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：在组件中，属性是只读的，绝不可以更改，这叫做单向数据流</strong></p>
+<p><img src="assets/2020-02-18-11-13-19.png" alt="|400"></p>
+<h2 id="组件实例的生命周期"><a href="#组件实例的生命周期" class="headerlink" title="组件实例的生命周期"></a>组件实例的生命周期</h2><p>当我们使用组件时<code>&lt;my-comp /&gt;</code>，会创建一个组件的实例，类似于vue实例，每个实例都有明确的生命周期</p>
+<p><img src="assets/2020-02-18-14-45-53.png" alt="|600"></p>
+<p>在生命周期的各个阶段，会触发调用一些函数，这些函数被称为<strong>生命周期钩子函数</strong></p>
+<p>最常用的两个钩子函数：<strong>created</strong> 和 <strong>mounted</strong></p>
+<ol>
+<li><strong>created</strong></li>
+</ol>
+<p>created函数发生在注入之后、模板编译之前，此时，组件还没有呈现界面</p>
+<p>如果有些数据需要经过某些计算得到，可以在这里进行更改，届时，在编译中就会直接应用新的数据</p>
+<p>但要<strong>注意</strong>，由于还未呈现界面，如果在这里使用了特别耗时的计算，将导致长时间的白屏</p>
+<ol start="2">
+<li><strong>mounted</strong></li>
+</ol>
+<p>mounted函数发生在挂载之后，此时页面已经呈现，在这里，可以用传统方案获取到dom，尽管不太常见</p>
+<p>如果某些数据在一开始就需要更新，同时又特别耗时，建议放到mounted中</p>
+<p><strong>关于异步代码</strong></p>
+<p>如果某些组件一开始时要执行一些异步代码（如ajax），<code>created</code>和<code>mounted</code>均可，效果差别不大</p>
+<blockquote>
+<p>因为由于事件循环的机制，会导致异步代码最终都会在挂载完后调用</p>
+</blockquote>
+<p>但如果异步代码需要特别长时间的准备（与很多因素有关），则建议放置到mounted中</p>
+<blockquote>
+<p>绝大部分时候，其实不必太关心这些差异</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/02/vue/vue2/" data-id="ck7aei2dq0004wwvm3ebgd1xc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/03/02/vue/vue3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          vue/vue3
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/03/02/vue/vue1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">vue/vue1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2020/03/02/vue/vue5/">vue/vue5</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/02/vue/vue4/">vue/vue4</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/02/vue/vue3/">vue/vue3</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/02/vue/vue2/">vue/vue2</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/02/vue/vue1/">vue/vue1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
