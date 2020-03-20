@@ -27,16 +27,16 @@
 <meta property="og:site_name" content="HCHLQ">
 <meta property="og:description" content="vue组件 {ignore}知识准备 ES6的模块化知识 ajax网络请求 fetch api promise api async await     ajax请求地址：http:&#x2F;&#x2F;yuanjin.tech:5005&#x2F;api&#x2F;movie?page&#x3D;页码&amp;limit&#x3D;页容量  组件概念一个完整的网页是复杂的，如果将其作为一个整体来进行开发，将会遇到下面的困难  代码凌乱臃肿 不易协作 难以">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/03/images/2020-02-18-10-24-44.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/images/2020-02-18-10-28-45.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/images/2020-02-18-11-00-58.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/images/2020-02-18-11-13-19.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/images/2020-02-18-14-45-53.png">
+<meta property="og:image" content="http://yoursite.com/blog/.com//2020-02-18-10-24-44.png">
+<meta property="og:image" content="http://yoursite.com/blog/.com//2020-02-18-10-28-45.png">
+<meta property="og:image" content="http://yoursite.com/blog/.com//2020-02-18-11-00-58.png">
+<meta property="og:image" content="http://yoursite.com/blog/.com//2020-02-18-11-13-19.png">
+<meta property="og:image" content="http://yoursite.com/blog/.com//2020-02-18-14-45-53.png">
 <meta property="article:published_time" content="2020-03-02T11:32:15.291Z">
-<meta property="article:modified_time" content="2020-03-20T03:30:28.248Z">
+<meta property="article:modified_time" content="2020-03-20T03:48:58.606Z">
 <meta property="article:author" content="HC">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/03/images/2020-02-18-10-24-44.png">
+<meta name="twitter:image" content="http://yoursite.com/blog/.com//2020-02-18-10-24-44.png">
 
 <link rel="canonical" href="http://yoursite.com/2020/03/02/vue2/">
 
@@ -185,7 +185,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-20 11:30:28" itemprop="dateModified" datetime="2020-03-20T11:30:28+08:00">2020-03-20</time>
+                <time title="Modified: 2020-03-20 11:48:58" itemprop="dateModified" datetime="2020-03-20T11:48:58+08:00">2020-03-20</time>
               </span>
 
           
@@ -245,7 +245,7 @@
 <li><strong>全局注册</strong></li>
 </ol>
 <p>一旦全局注册了一个组件，整个应用中任何地方都可以使用该组件</p>
-<p><img src="../../images/2020-02-18-10-24-44.png" alt="|600"></p>
+<p><img src="/blog/.com//2020-02-18-10-24-44.png" alt="|600"></p>
 <p>全局注册的方式是：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 参数1：组件名称，将来在模板中使用组件时，会使用该名称</span></span><br><span class="line"><span class="comment">// 参数2：组件配置对象</span></span><br><span class="line"><span class="comment">// 该代码运行后，即可在模板中使用组件</span></span><br><span class="line">Vue.component(<span class="string">'my-comp'</span>, myComp)</span><br></pre></td></tr></table></figure>
 
@@ -260,7 +260,7 @@
 <li><strong>局部注册</strong></li>
 </ol>
 <p>局部注册就是哪里要用到组件，就在哪里注册</p>
-<p><img src="../../images/2020-02-18-10-28-45.png" alt="|600"></p>
+<p><img src="/blog/.com//2020-02-18-10-28-45.png" alt="|600"></p>
 <p>局部注册的方式是，在要使用组件的组件或实例中加入一个配置：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是另一个要使用my-comp的组件</span></span><br><span class="line"><span class="keyword">var</span> otherComp = &#123;</span><br><span class="line">  components:&#123;</span><br><span class="line">    <span class="comment">// 属性名为组件名称，模板中将使用该名称</span></span><br><span class="line">    <span class="comment">// 属性值为组件配置对象</span></span><br><span class="line">    <span class="string">"my-comp"</span>: myComp</span><br><span class="line">  &#125;,</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">      &lt;!-- 该组件的其他内容 --&gt;</span></span><br><span class="line"><span class="string">      &lt;my-comp&gt;&lt;/my-comp&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -298,7 +298,7 @@
 </blockquote>
 <h2 id="组件树"><a href="#组件树" class="headerlink" title="组件树"></a>组件树</h2><p>一个组件创建好后，往往会在各种地方使用它。它可能多次出现在vue实例中，也可能出现在其他组件中。</p>
 <p>于是就形成了一个组件树</p>
-<p><img src="../../images/2020-02-18-11-00-58.png" alt="|400"></p>
+<p><img src="/blog/.com//2020-02-18-11-00-58.png" alt="|400"></p>
 <h2 id="向组件传递数据"><a href="#向组件传递数据" class="headerlink" title="向组件传递数据"></a>向组件传递数据</h2><p>大部分组件要完成自身的功能，都需要一些额外的信息</p>
 <p>比如一个头像组件，需要告诉它头像的地址，这就需要在使用组件时向组件传递数据</p>
 <p>传递数据的方式有很多种，最常见的一种是使用<strong>组件属性 component props</strong></p>
@@ -309,9 +309,9 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> OtherComp = &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    MyComp</span><br><span class="line">  &#125;,</span><br><span class="line">  data()&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      a:<span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;my-comp :p1="a" :p2="2" p3="3"/&gt;</span></span><br><span class="line"><span class="string">  `</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>注意：在组件中，属性是只读的，绝不可以更改，这叫做单向数据流</strong></p>
-<p><img src="../../images/2020-02-18-11-13-19.png" alt="|400"></p>
+<p><img src="/blog/.com//2020-02-18-11-13-19.png" alt="|400"></p>
 <h2 id="组件实例的生命周期"><a href="#组件实例的生命周期" class="headerlink" title="组件实例的生命周期"></a>组件实例的生命周期</h2><p>当我们使用组件时<code>&lt;my-comp /&gt;</code>，会创建一个组件的实例，类似于vue实例，每个实例都有明确的生命周期</p>
-<p><img src="../../images/2020-02-18-14-45-53.png" alt="|600"></p>
+<p><img src="/blog/.com//2020-02-18-14-45-53.png" alt="|600"></p>
 <p>在生命周期的各个阶段，会触发调用一些函数，这些函数被称为<strong>生命周期钩子函数</strong></p>
 <p>最常用的两个钩子函数：<strong>created</strong> 和 <strong>mounted</strong></p>
 <ol>
