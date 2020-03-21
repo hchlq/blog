@@ -20,34 +20,28 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/blog/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="yeoman脚手架1 cnpm i -g yo 2 cnpm i -g generator-react-webpack 3 yo react-webpack 之后会再取项目的名字  到半可以中止, 跳到第四步 4 安装依赖 cnpm install 使用create安装1 npm isntall -g create-react-app(只有一次) 2 create-react-app my-app">
-<meta property="og:type" content="article">
-<meta property="og:title" content="react">
-<meta property="og:url" content="http://yoursite.com/2020/02/20/react/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="HCHLQ">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="HCHLQ">
-<meta property="og:description" content="yeoman脚手架1 cnpm i -g yo 2 cnpm i -g generator-react-webpack 3 yo react-webpack 之后会再取项目的名字  到半可以中止, 跳到第四步 4 安装依赖 cnpm install 使用create安装1 npm isntall -g create-react-app(只有一次) 2 create-react-app my-app">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/blog/2020/02/20/react/%7B%7D">
-<meta property="article:published_time" content="2020-02-20T14:31:47.244Z">
-<meta property="article:modified_time" content="2020-02-20T15:30:44.435Z">
 <meta property="article:author" content="HC">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/blog/2020/02/20/react/%7B%7D">
 
-<link rel="canonical" href="http://yoursite.com/2020/02/20/react/">
+<link rel="canonical" href="http://yoursite.com/page/2/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : false,
-    isPost : true,
+    isHome : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>react | HCHLQ</title>
+  <title>HCHLQ</title>
   
 
 
@@ -147,11 +141,11 @@
             
 
   <div class="posts-expand">
-      
+        
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/20/react/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/20/react/react/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
@@ -164,7 +158,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          react
+          
+            <a href="/blog/2020/02/20/react/react/" class="post-title-link" itemprop="url">react/react</a>
         </h1>
 
         <div class="post-meta">
@@ -173,10 +168,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-02-20 22:31:47 / Modified: 23:30:44" itemprop="dateCreated datePublished" datetime="2020-02-20T22:31:47+08:00">2020-02-20</time>
+              <time title="Created: 2020-02-20 22:31:47" itemprop="dateCreated datePublished" datetime="2020-02-20T22:31:47+08:00">2020-02-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-03-21 23:47:46" itemprop="dateModified" datetime="2020-03-21T23:47:46+08:00">2020-03-21</time>
+              </span>
 
           
 
@@ -189,7 +190,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="yeoman脚手架"><a href="#yeoman脚手架" class="headerlink" title="yeoman脚手架"></a>yeoman脚手架</h1><p>1 cnpm i -g yo</p>
+          <h1 id="yeoman脚手架"><a href="#yeoman脚手架" class="headerlink" title="yeoman脚手架"></a>yeoman脚手架</h1><p>1 cnpm i -g yo</p>
 <p>2 cnpm i -g generator-react-webpack</p>
 <p>3 yo react-webpack 之后会再取项目的名字  到半可以中止, 跳到第四步</p>
 <p>4 安装依赖 cnpm install</p>
@@ -207,7 +208,7 @@
 </li>
 <li><p>jsx也是表达式 <code>{ &lt;p&gt; xxx &lt;/P&gt; }</code></p>
 </li>
-<li><p>属性 <img src="/blog/2020/02/20/react/{}"></p>
+<li><p>属性 <img src="/blog/2020/02/20/react/react/{}"></p>
 </li>
 </ul>
 <h2 id="style"><a href="#style" class="headerlink" title="style"></a>style</h2><ul>
@@ -269,36 +270,161 @@
 <p>8 componentWillUnmount() {} 组件将要卸载</p>
 <p> render() {} 被多次调用</p>
 
+      
     </div>
 
     
     
     
-
       <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/blog/2020/02/09/hchlq/" rel="prev" title="hchlq">
-      <i class="fa fa-chevron-left"></i> hchlq
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/blog/2020/02/21/React%20this&e/" rel="next" title="React this&e">
-      React this&e <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
+        <div class="post-eof"></div>
       </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/09/hchlq/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="HC">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HCHLQ">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2020/02/09/hchlq/" class="post-title-link" itemprop="url">hchlq</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-09 12:39:30" itemprop="dateCreated datePublished" datetime="2020-02-09T12:39:30+08:00">2020-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-21 09:23:58" itemprop="dateModified" datetime="2020-02-21T09:23:58+08:00">2020-02-21</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
     
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="welcome-to-hchlq-home"><a href="#welcome-to-hchlq-home" class="headerlink" title="welcome to hchlq home"></a>welcome to hchlq home</h1>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/09/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="HC">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HCHLQ">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2020/02/09/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-09 11:50:44" itemprop="dateCreated datePublished" datetime="2020-02-09T11:50:44+08:00">2020-02-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
   </article>
   
   
   
 
   </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -349,7 +475,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#yeoman脚手架"><span class="nav-number">1.</span> <span class="nav-text">yeoman脚手架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用create安装"><span class="nav-number">2.</span> <span class="nav-text">使用create安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#jsx"><span class="nav-number">2.1.</span> <span class="nav-text">jsx</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text"> { name } </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#style"><span class="nav-number">3.1.</span> <span class="nav-text">style</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建组件"><span class="nav-number">3.2.</span> <span class="nav-text">创建组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状态"><span class="nav-number">3.3.</span> <span class="nav-text">状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#props-与-state的区别"><span class="nav-number">3.4.</span> <span class="nav-text">props 与 state的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件渲染和列表循环"><span class="nav-number">3.5.</span> <span class="nav-text">条件渲染和列表循环</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#条件渲染"><span class="nav-number">3.5.1.</span> <span class="nav-text">条件渲染:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">3.6.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件通信"><span class="nav-number">3.7.</span> <span class="nav-text">组件通信</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#父组件给子组件传值"><span class="nav-number">3.7.1.</span> <span class="nav-text">父组件给子组件传值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子组件给父组件传值-尽可能让父元素去处理"><span class="nav-number">3.7.2.</span> <span class="nav-text">子组件给父组件传值(尽可能让父元素去处理)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期"><span class="nav-number">3.8.</span> <span class="nav-text">生命周期</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -363,7 +488,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
