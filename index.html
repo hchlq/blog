@@ -145,6 +145,91 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/16/react/jsx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="HC">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HCHLQ">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2020/04/16/react/jsx/" class="post-title-link" itemprop="url">react/jsx</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-04-16 14:47:57 / Modified: 15:33:23" itemprop="dateCreated datePublished" datetime="2020-04-16T14:47:57+08:00">2020-04-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h1><ul>
+<li>定义: <code>JSX</code>是 facebook 起草的 JS 扩展语法，本质上是一个对象，会被 babel 编译，最终会转换为 createElement</li>
+</ul>
+<h2 id="使用的细节"><a href="#使用的细节" class="headerlink" title="使用的细节"></a>使用的细节</h2><h3 id="每一个-JSX-表达式，有且仅有一个根节点"><a href="#每一个-JSX-表达式，有且仅有一个根节点" class="headerlink" title="每一个 JSX 表达式，有且仅有一个根节点"></a>每一个 JSX 表达式，有且仅有一个根节点</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> oDiv = (</span><br><span class="line">    &lt;div&gt;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;h1&gt;&lt;/</span>h1&gt;</span><br><span class="line">)</span><br><span class="line"><span class="comment">// 这样的语法是不符合规范的，没有一个根节点</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 一下这样才规范</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> oDiv = (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;div&gt;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;h1&gt;&lt;/</span>h1&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/如果说不想套一个根元素，可以使用React.Fragment 或 &lt;&gt;&lt;/</span>&gt;</span><br><span class="line"><span class="keyword">const</span> oDiv = (</span><br><span class="line">    &lt;&gt;</span><br><span class="line">        &lt;div&gt;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;h1&gt;&lt;/</span>h1&gt;</span><br><span class="line">    &lt;<span class="regexp">/&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const oDiv = (</span></span><br><span class="line"><span class="regexp">    &lt;React.Fragment&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;&lt;/</span>div&gt;</span><br><span class="line">        &lt;h1&gt;&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>React.Fragment&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="每个JSX元素必须有结束标记-XML规范"><a href="#每个JSX元素必须有结束标记-XML规范" class="headerlink" title="每个JSX元素必须有结束标记(XML规范)"></a>每个JSX元素必须有结束标记(XML规范)</h3><ul>
+<li>我们平常使用的img标签等，是可以不用结束标记的<code>&lt;img src=&#39;&#39; alt=&#39;&#39;&gt;</code>, 但是在React中必须要有结束标记, 可以使用<img src alt>或 <img src alt></li>
+</ul>
+<h3 id="在JSX元素中使用表达式"><a href="#在JSX元素中使用表达式" class="headerlink" title="在JSX元素中使用表达式"></a>在JSX元素中使用表达式</h3><ul>
+<li><p>将表达式作为内容的一部分，<strong>如果表达式是false, null或者是undefined,则不显示。普通对象不能直接放到<code>{}</code>中，但是React对象(如 const div = ( <div>111</div> ))可以,  数组也可以直接放置</strong>。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> msg = <span class="string">'hello React!'</span></span><br><span class="line"><span class="keyword">const</span> oDiv = (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &#123; msg &#125;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将表达式作为元素的属性， 在元素的属性的值，可以使用jsx表示式, 如img的src,className等</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> url = <span class="string">'./1.jpg'</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> oImg = (</span><br><span class="line">    &lt;img src=&#123;url&#125; /&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>属性使用小驼峰命名法， 如 marginLeft等</p>
+</li>
+</ul>
+<h2 id="放置注入攻击"><a href="#放置注入攻击" class="headerlink" title="放置注入攻击"></a>放置注入攻击</h2><ul>
+<li>React将<code>{}</code>中的字符串进行编码，放置攻击</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> str = <span class="string">`&lt;p&gt;lorem.&lt;/p&gt;`</span></span><br><span class="line"><span class="keyword">const</span> div = (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &#123; str &#125;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 最终会得到 div标签里是&lt;p&gt;lorem.&lt;/</span>p&gt;字符串，不会转为html结构， 使用的是innerText赋值</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果是在想把字符串转为html结构, 则使用dangerouslySetInnerHTML</span></span><br><span class="line"><span class="comment">// &lt;div dangerouslySetInnerHTML=&#123; &#123; _html: str &#125; &#125;&gt;&lt;/div&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="元素的不可变性"><a href="#元素的不可变性" class="headerlink" title="元素的不可变性"></a>元素的不可变性</h2><ul>
+<li>虽然JXS是一个对象，但是里面所有的属性都不可以修改。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/24/react/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3setState/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -939,85 +1024,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/21/webpack/webpack%E6%90%AD%E5%BB%BA%E5%B0%8F%E5%9E%8Bvue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="HC">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HCHLQ">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2020/03/21/webpack/webpack%E6%90%AD%E5%BB%BA%E5%B0%8F%E5%9E%8Bvue/" class="post-title-link" itemprop="url">webpack/webpack搭建小型vue</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-21 23:48:22" itemprop="dateCreated datePublished" datetime="2020-03-21T23:48:22+08:00">2020-03-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-22 00:03:02" itemprop="dateModified" datetime="2020-03-22T00:03:02+08:00">2020-03-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="首先配置一个webpack的配置环境"><a href="#首先配置一个webpack的配置环境" class="headerlink" title="首先配置一个webpack的配置环境"></a>首先配置一个webpack的配置环境</h1><ul>
-<li><p>npm init -y 默认选中</p>
-</li>
-<li><p>cnpm install webpack webpack-cli –save-dev 局部安装webpack webpack-cli</p>
-</li>
-<li><p>cnpm install html-webpack-plugin –save-dev 安装可以将index.html自动引入入口的js文件</p>
-</li>
-<li><p>cnpm install webpack-dev-server –save-dev 安装本地的服务器环境</p>
-</li>
-</ul>
-<h1 id="安装-vue-vue-loader-vue-style-loader-vue-html-loader-vue-template-compiler"><a href="#安装-vue-vue-loader-vue-style-loader-vue-html-loader-vue-template-compiler" class="headerlink" title="安装 vue vue-loader vue-style-loader vue-html-loader vue-template-compiler"></a>安装 vue vue-loader vue-style-loader vue-html-loader vue-template-compiler</h1><h1 id="配置webpack-config-js-amp-amp-package-json"><a href="#配置webpack-config-js-amp-amp-package-json" class="headerlink" title="配置webpack.config.js &amp;&amp; package.json"></a>配置webpack.config.js &amp;&amp; package.json</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> VueWebpackPlugin = <span class="built_in">require</span>(<span class="string">'vue-loader/lib/plugin'</span>);</span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    mode: <span class="string">'development'</span>,<span class="comment">//环境</span></span><br><span class="line">    entry: <span class="string">'./index.js'</span>,<span class="comment">//入口文件</span></span><br><span class="line">    output: &#123;<span class="comment">//打包的出口文件</span></span><br><span class="line">        path: path.resolve(__dirname, <span class="string">'dist'</span>),</span><br><span class="line">        filename: <span class="string">'bundle.js'</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="built_in">module</span>: &#123;</span><br><span class="line">        rules: [</span><br><span class="line">            <span class="comment">//处理.vue文件的css样式</span></span><br><span class="line">            &#123;</span><br><span class="line">                test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">                use: [<span class="string">'vue-style-loader'</span>, <span class="string">'css-loader'</span>]</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">//处理遇到.vue结尾的文件</span></span><br><span class="line">            &#123;</span><br><span class="line">                test: <span class="regexp">/\.vue$/</span>,</span><br><span class="line">                use: <span class="string">'vue-loader'</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="comment">//自动引入js入口文件</span></span><br><span class="line">        <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">            template: <span class="string">'./index.html'</span>,</span><br><span class="line">            filename: <span class="string">'index.html'</span>,</span><br><span class="line">            title: <span class="string">'vue-webpack'</span></span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="comment">//vue环境必要的</span></span><br><span class="line">        <span class="keyword">new</span> VueWebpackPlugin()</span><br><span class="line">    ],</span><br><span class="line">    resolve: &#123;</span><br><span class="line">        alias: &#123;<span class="comment">//省略导入vue/dist/vue.esm</span></span><br><span class="line">            <span class="string">"vue"</span>: <span class="string">'vue/dist/vue.esm'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    devServer: &#123;<span class="comment">//服务器环境</span></span><br><span class="line">        port: <span class="number">8888</span>,</span><br><span class="line">        inline: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//package.json(参考，只配置scripts即可)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"vue-webpack"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="string">"main"</span>: <span class="string">"webpack.config.js"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"webpack"</span>,</span><br><span class="line">    <span class="string">"dev"</span>: <span class="string">"webpack-dev-server"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"keywords"</span>: [],</span><br><span class="line">  <span class="string">"author"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="string">"license"</span>: <span class="string">"ISC"</span>,</span><br><span class="line">  <span class="string">"devDependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"html-webpack-plugin"</span>: <span class="string">"^3.2.0"</span>,</span><br><span class="line">    <span class="string">"vue-html-loader"</span>: <span class="string">"^1.2.4"</span>,</span><br><span class="line">    <span class="string">"vue-loader"</span>: <span class="string">"^15.9.1"</span>,</span><br><span class="line">    <span class="string">"vue-style-loader"</span>: <span class="string">"^4.1.2"</span>,</span><br><span class="line">    <span class="string">"vue-template-compiler"</span>: <span class="string">"^2.6.11"</span>,</span><br><span class="line">    <span class="string">"webpack"</span>: <span class="string">"^4.42.0"</span>,</span><br><span class="line">    <span class="string">"webpack-cli"</span>: <span class="string">"^3.3.11"</span>,</span><br><span class="line">    <span class="string">"webpack-dev-server"</span>: <span class="string">"^3.10.3"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"vue"</span>: <span class="string">"^2.6.11"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1083,7 +1094,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
